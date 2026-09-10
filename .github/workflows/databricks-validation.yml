@@ -1,25 +1,29 @@
-name: Validation
+name: Databricks validation
 
 on:
   pull_request:
     branches:
       - main
 
-  push:
-    branches:
-      - main
-
 permissions:
   contents: read
+  id-token: write
 
 jobs:
   validate:
     name: Validate Databricks Bundle
     runs-on: ubuntu-latest
 
+    environment: dev
+
     defaults:
       run:
         working-directory: databricks
+
+    env:
+      DATABRICKS_AUTH_TYPE: github-oidc
+      DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
+      DATABRICKS_CLIENT_ID: ${{ vars.DATABRICKS_CLIENT_ID }}
 
     steps:
       - name: Checkout repository
@@ -27,6 +31,9 @@ jobs:
 
       - name: Install Databricks CLI
         uses: databricks/setup-cli@main
+
+      - name: Check Databricks authentication
+        run: databricks current-user me
 
       - name: Validate bundle
         run: databricks bundle validate -t dev

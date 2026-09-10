@@ -19,5 +19,4 @@ targets:
   dev:
     workspace:
       host: https://dbc-8632cfda-0851.cloud.databricks.com
-      profile: customer_segmentation
 
