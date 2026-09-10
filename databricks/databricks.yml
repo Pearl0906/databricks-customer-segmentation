@@ -1,0 +1,23 @@
+bundle:
+  name: customer_segmentation
+
+include:
+  - resources/*.yml
+      
+variables:
+  catalog:
+    description: "The targeted Unity Catalog for data architecture"
+    default: "ecommerce" # Matches your hardcoded Terraform value
+  schema:
+    description: "Targeted landing database schema"
+    default: "bronze"
+  warehouse_id:
+    description: "The SQL Warehouse ID running notebook compute tasks"
+    default: "9e94c5ddf6b8a6c3" # Locate and paste your active Warehouse ID from the UI
+
+targets:
+  dev:
+    workspace:
+      host: https://dbc-8632cfda-0851.cloud.databricks.com
+      profile: customer_segmentation
+

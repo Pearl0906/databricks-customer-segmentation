@@ -24,3 +24,10 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+terraform.tfvars
+*.tfstate
+*.tfstate.*
+.terraform/
+
+data/
