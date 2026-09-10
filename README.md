@@ -18,5 +18,4 @@ Bronze
 Silver
  ↓
 Gold
- ↓
-Customer Segments
+ 
