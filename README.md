@@ -5,7 +5,7 @@ A Databricks customer segmentation project using:
 - Databricks
 - SQL notebooks
 - Terraform
-- Databricks Asset Bundles (DAB)
+- Databricks Automation Bundles (DAB)
 - GitHub
 - GitHub Actions
 
