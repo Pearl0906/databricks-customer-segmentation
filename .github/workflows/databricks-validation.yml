@@ -1,6 +1,7 @@
 name: Databricks validation
 
 on:
+  push:
   pull_request:
     branches:
       - main
