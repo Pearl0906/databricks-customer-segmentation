@@ -6,7 +6,7 @@ resource "databricks_schema" "bronze" {
 }
 
 resource "databricks_volume" "bronze_volume" {
-  name         = "raw_landing_volume" 
+  name         = "raw_landing_volume"
   catalog_name = var.catalog_name
   schema_name  = databricks_schema.bronze.name # Links directly to your bronze schema
   volume_type  = "MANAGED"
