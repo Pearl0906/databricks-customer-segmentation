@@ -37,7 +37,7 @@ Business Analytics
 
 ```
 
-**## Technologies and Responsibilities**
+## Technologies and Responsibilities
 
 - **Terraform** → Creates and manages Databricks infrastructure.
 - **DAB** → Deploys Databricks notebooks and jobs.
